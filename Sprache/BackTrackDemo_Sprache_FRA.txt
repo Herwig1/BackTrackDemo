@@ -1,0 +1,339 @@
+Français  Traduit avec DeepL.com (version gratuite)
+Croix
+Plus
+Cheminée
+Huit
+Pyramide
+Flèche-1
+Hercule
+Miroir
+Flèche-2
+Diamant
+Solitaire
+Solitaire 2
+// BackMain.lfm
+Exemples de backtracking
+N - Problème de dames
+Chemin du cavalier
+Problème du voyageur d'action I
+Casse-tête de chiffres
+Maison du Père Noël
+Fermer
+Routeur avec algorithme de Lee
+Problème du voyageur d'action II
+Faire son sac à dos
+Problème des quatre couleurs
+&ProgrammeInfo
+Labyrinthe
+Sudoku
+// n_Damen.pas
+Solution(s) à 
+aucune solution trouvée
+ Solutions trouvées
+Il y a 
+ solutions indépendantes
+Des solutions ont été 
+ (max. 
+Supprimez toutes les solutions symétriques par rapport à l'axe. 
+de l'axe W-O
+de l'axe NO-SE
+de l'axe N-S
+de l'axe SW-NO
+de la rotation de +90
+de la rotation de 180
+de la rotation de 270
+ni 
+ Solution
+en 
+// n_Damen.lfm
+n-Dames
+déterminer des solutions indépendantes
+nouveau test
+Nombre de dames : 
+chercher toutes les solutions
+montrer les étapes intermédiaires
+démarrer
+terminer
+// springer.pas
+. Lsg
+trouvé une solution
+ Solutions trouvées
+Solution no. 
+// springer.lfm
+Position de départ :
+Colonne x
+Ligne y
+Taille de l'échiquier
+// nikolaus.pas
+Chercher une solution ...
+Chercher des solutions ...
+(une) solution trouvée !
+// nikolaus.lfm
+La maison de Nicolas
+Tracer des lignes
+// ronde.pas
+Saisir les points
+longueur actuelle la plus petite : %7.4f
+Limite
+Longueur
+Longueur initiale : %7.4f Longueur finale : %7.4f
+// voyage circulaire.lfm
+Itinéraire du voyageur de commerce I ( ne visiter chaque ville qu'une seule fois )
+Nombre de villes à visiter : 
+Méthode
+Méthode TA
+Méthode SA
+recherche complète
+Saisir les villes
+Distances
+// zahlraet.pas
+Valeur
+ Solution(s) trouvée(s)
+caractère non autorisé
+opérateur non autorisé
+trop de symboles : (
+// zahlraet.lfm
+recherche optimisée
+Entrée
+// AlgoInfo.pas
+Informations sur le problème des N dames
+Le programme tente, selon l'algorithme de traçabilité (backtracking), de placer N dames sur un terrain de taille NxN de telle sorte qu'aucune dame ne puisse en capturer une autre selon les règles des échecs.
+La taille du champ n (1<=n<=16) peut être déterminée librement.
+Les solutions indépendantes sont celles qui ne peuvent pas être converties l'une en l'autre par symétrie axiale ou par rotation.
+Après un clic de souris sur une solution, celle-ci est représentée dans le graphique.
+Informations sur le circuit du sauteur
+Le programme essaie de trouver un chemin pour le cavalier à partir d'une position de départ donnée, de sorte que chaque case soit visitée exactement une fois. Les règles du tour du cavalier s'appliquent.
+voir :
+Attention : 
+La recherche peut durer très longtemps ! C'est pourquoi il ne faut choisir que des petites cases !
+Après un clic de souris sur une solution, les coups du cavalier sont animés dans le graphique.
+Informations sur le circuit du voyageur de commerce I
+Le programme essaie de déterminer un circuit de manière à ce que chaque lieu ne soit visité qu'une seule fois et que la distance parcourue soit la plus petite possible. Il est supposé que tous les lieux sont reliés entre eux !
+Outre la méthode de backtracking (recherche complète), deux autres algorithmes sont implémentés, qui n'utilisent pas le backtracking et ne fournissent pas toujours la plus petite distance parcourue. En revanche, ils sont beaucoup plus rapides
+voir c''t janvier 1994
+Algorithmes dérivés du comportement d'une masse fondue lors de la solidification.
+SA - Simulated-Annealing-Algorithmus ; solidification simulée (1983 ; IBM)
+TA - Algorithme d'acceptation des seuils.
+Acceptation du seuil (1990 ; IBM, Dueck, Scheuer) 
+COMMENCER {SA ou TA pour minimiser}
+choisis une configuration de sortie ;
+choisis une valeur initiale T>0 ;
+RÉPÉTEZ
+  REPETITION
+    choisissez une nouvelle configuration, qui est une petite modification de la
+    ancienne configuration ;
+    calcule la fonction de qualité Q de la nouvelle configuration ;
+    DE:=Q(nouveau)-Q(ancien) ;
+    SI DE<0
+       ALORS ancienne configuration:=nouvelle configuration
+       SI nombre aléatoire<exp(-DE/(kT))
+             ALORS ancienne configuration:=nouvelle configuration
+    SI DE<T
+       ALORS ancienne configuration:=nouvelle configuration 
+  BIS longtemps pas de dégradation de la qualité ;
+  diminution de T ;
+JUSQU'A plus du tout de diminution de la fonction qualité ;
+FIN.
+Après avoir cliqué avec la souris sur une solution intermédiaire, le circuit s'anime dans le graphique.
+Informations sur le circuit du voyageur de commerce II
+Le programme essaie de déterminer un circuit de manière à ce que la distance parcourue soit la plus petite possible. Les lieux peuvent être visités plusieurs fois et les routes peuvent parfois être traversées dans les deux sens.
+Les lieux et les distances peuvent être choisis librement.
+Une case vide ou un 0 dans la matrice des distances signifie : pas de liaison.
+Les rues à sens unique sont représentées en jaune ou en aqua selon la direction.
+Informations sur la solution de l'énigme numérique
+Comme il est d'usage pour les énigmes numériques, chaque lettre représente un chiffre.
+Le programme recherche toutes les solutions par tâtonnement.
+Informations sur la maison du Père Noël
+Le programme peut trouver toutes les solutions du problème connu.
+Le point de départ peut être choisi librement
+Après un clic de souris sur une solution, celle-ci est représentée de manière animée dans le graphique.
+Autorouting selon l'algorithme de Lee
+Le programme essaie de relier un certain nombre de points sans les croiser.
+L'arrière-plan pratique est par exemple la création d'un circuit imprimé.
+On laisse partir des ondes du point de départ jusqu'à ce que le point final soit atteint ou qu'il ne soit plus possible de générer un nouveau front d'onde.
+Dans le premier cas, on retrace le chemin du point final au point initial (algorithme de Lee). Il s'agit également du chemin le plus court qui peut être généré.
+Dans le 2e cas - le point final n'a pas été atteint - un chemin déterminé précédemment est effacé et une nouvelle tentative est lancée. (Backtracking)
+(voir par exemple c''t 3/90 page 240).
+Le deuxième algorithme essaie de trouver le chemin directement. Il ne trouve pas toujours de solutions ! En outre, le comportement temporel est également moins bon.
+Problème des quatre couleurs
+Le programme essaie de colorer un certain nombre de surfaces avec le moins de couleurs possible, de manière à ce que les surfaces ayant une limite commune n'aient pas la même couleur.
+Le contexte pratique est par exemple la création d'atlas (cartes politiques).
+Le problème sous-jacent des quatre couleurs n'a été correctement démontré mathématiquement qu'il y a quelque temps.
+Dans le programme, 20 surfaces rectangulaires au maximum peuvent être imbriquées les unes dans les autres à volonté. La condition est toutefois que les surfaces restent contiguës.
+Problème du sac à dos
+Le programme essaie de placer un certain nombre d'objets dans un sac à dos de manière à ce que la valeur totale des objets soit la plus grande possible pour une limite de poids donnée.
+L'arrière-plan pratique est par exemple la composition d'une cargaison (d'avion).
+La solution peut être trouvée par une recherche exhaustive.
+Dans le programme, 20 pièces au maximum peuvent être prédéfinies avec des poids et des valeurs différents. 
+Les rectangles jaunes représentent la valeur, les rouges le poids.
+Sortir du labyrinthe
+Le programme tente de trouver un chemin pour sortir d'un labyrinthe. La position de départ est représentée en rouge, la sortie en vert.
+La solution du problème est tentée d'une part par le procédé de rétrotracking, mais d'autre part aussi par l'algorithme Lee. Il est également possible de trouver des solutions lorsque la méthode "toujours rester à droite" échoue, par exemple lorsque la position de départ se trouve dans le labyrinthe, plus précisément dans une pièce dont on peut faire le tour.
+L'algorithme de backtracking n'est pas aussi efficace, comme le montre une comparaison directe - en particulier lorsque la longueur du trajet doit être minimale ! Le comportement temporel se dégrade encore de manière dramatique lorsque les couloirs sont rendus plus larges qu'une unité.
+Remarque sur l'algorithme de Lee :
+On laisse partir les ondes de la position de départ jusqu'à ce que la sortie/le point final soit atteint(e) ou qu'aucun nouveau front d'onde ne puisse être généré.
+Dans le premier cas, on retrace le chemin de la sortie/du point final à la position de départ (algorithme de Lee). Il s'agit également du chemin le plus court qui peut être généré.
+Dans le 2e cas - la sortie n'a pas été atteinte - il n'y a pas de solution.
+Le bouton gauche de la souris et le glisser permettent de dessiner des obstacles ; le bouton droit de la souris et le glisser permettent d'éliminer des obstacles. Un double clic sur une case libre place le point de départ dans cette case, en cas de double clic sur un obstacle, on y obtient la nouvelle sortie/point final.
+Problème du solitaire
+Le programme tente de résoudre le jeu de société "Solitaire" ou certaines de ses modifications. Sans algorithmes appropriés, les méthodes de force brute pures prennent beaucoup de temps.
+On peut aussi essayer de trouver une solution manuellement.
+Si l'on passe la souris sur un pion, celui-ci est coloré en vert lorsqu'un coup clair est possible. Un clic sur la pierre permet alors d'effectuer ce déplacement. Si plusieurs coups sont possibles, la pierre est colorée en rouge. Il faut alors cliquer dessus et ensuite effectuer un clic sur la cible du saut.
+La case entourée en rouge est la case d'arrivée sur laquelle doit se trouver le dernier pion.
+Attention : la solution du Solitaire 2 nécessite près de 2 milliards de coups d'essai avec les méthodes les plus efficaces de ce programme !
+La solution de David Dirkse a servi de modèle pour les algorithmes de résolution.
+voir :  David Dirkse, solitaire version 2, july, 2010, http://www.davdata.nl/math/peg-solitaire.html
+Dans le premier filtre, on essaie d'identifier et donc d'éviter les suites de coups répétitifs qui ne peuvent pas mener au but.
+Avec le deuxième filtre, on procède à une évaluation de la position. Par exemple, aucune solution n'est possible si l'on n'a plus de pion avec lequel on pourrait sauter jusqu'à la case finale.
+Le programme tente de résoudre un puzzle Scramble Square™ 3x3. Un algorithme très efficace a été présenté dans le magazine informatique c't 17/2023 page 130 et suivantes. Il constitue la base du programme de démonstration
+Les images peuvent être déplacées par glisser-déposer à un endroit du carré. (De là, également dans la barre d'images). Si l'on appuie sur le bouton droit de la souris, l'image sous la souris est tournée de 90° dans le carré.
+Le programme tente de résoudre un sudoku. Outre l'approche par force brute, d'autres approches améliorées sont mises à disposition : Une optimisation dans laquelle on commence par les lignes qui ont le plus d'entrées. Une deuxième optimisation dans laquelle on traite d'abord les endroits pour lesquels il n'y a qu'une seule possibilité.
+ Une 4ème possibilité est de résoudre le sudoku par des considérations logiques (ne fournit pas toujours une solution).
+En plus des exemples proposés, il est possible de saisir un autre sudoku.
+// RouteLee.pas
+Établir des liens
+Marquer les liaisons
+Trier les points selon la longueur de la liaison
+// RouteLee.lfm
+Routeur ( avec algorithme Lee )
+Nombre de points à sélectionner
+Nombre de liaisons
+Exemple aléatoire 
+Algorithme de Lee
+// rundweg.pas
+Recherche interrompue
+Circuit avec la plus petite longueur : 
+Pas de circuit trouvé
+valeur non valide pour le nombre de villes
+// rundweg.lfm
+Chemin du voyageur de commerce II ( chaque ville peut être visitée plusieurs fois ).
+Saisir les distances
+// Sac à dos.pas
+Valeur : 
+  Poids : 
+Meilleure solution : 
+ Solutions (premières) : 
+N°
+Poids
+Saisir les pièces
+// Sac à dos.lfm
+Sac à dos
+Nombre de pièces : 
+Poids total
+// quadricolore.pas
+Marquer les rectangles des pays avec la souris dans la partie supérieure.
+Coloriage
+coloration trouvée
+pas de coloration trouvée : l'algorithme est manifestement erroné
+Pays 
+Couleur
+Recherche bordure pour pays 
+Peut créer une bordure pour le pays 
+ Ne peut pas créer de frontière
+Recherche de bordures terminée
+Recherche frontières et voisins
+// quadricolore.lfm
+Problème des 4 couleurs
+Nouvelle entrée
+4 nouveaux pays
+Nombre de pays : 
+Ajouter un pays
+Supprimer un pays
+// backtrackinfo.lfm
+Info
+Version 1.7 du 15.12.2023
+Une collection de 13 programmes de démonstration sur les algorithmes de backtracking.
+OK
+// Labyrinthe.pas
+Longueur du chemin : 
+// Labyrinthe.mètre linéaire
+Sortie
+Direction de départ :
+Procédure
+Backtracking - tout droit
+Backtracking - d'abord à droite
+Backtracking - aléatoire
+chercher la meilleure solution
+obstacle - bouton gauche de la souris et glisser
+champ libre - bouton droit de la souris et glisser
+Départ - double-clic sur champ libre
+sortie - double clic sur l'obstacle
+NouveauDépart
+// solitaer.pas
+Abandonner+enregistrer
+Terminer le jeu
+Manuel
+Reprendre
+Temps : 
+ ms
+jusqu'à présent 
+// solitaer.lfm
+BruteForce récursif
+BruteForce optimisé récursivement
+BruteForce itératif
+BruteForce itératif avec filtre1
+BruteForce itératif avec filtre2
+BruteForce itératif, les deux filtres
+normal
+en spirale
+par blocs
+droite - haut - gauche - bas
+haut - gauche - bas - droite 
+gauche - bas - droite - haut 
+en bas - à droite - en haut - à gauche
+Ordre
+Comptage
+Affectation des sorties
+testé, en fonction de l'état d'avancement :
+Résultat
+montre l'état intermédiaire
+afficher la suite de trains
+Retirer le train
+// contrôle pause.pas
+pas de pause
+Retard 
+Longueur de la pause 
+diminuer
+augmenter
+réduire de moitié
+doubler
+// commande de pause.lfm
+Longueur de pause 256 ms
+Annulation
+Valeur par défaut
+aucune
+// puzzle3x3.pas
+1 solution trouvée
+Pièces No.
+Rotation
+// puzzle3x3.lfm
+Commutation sombre/clair
+Exemple 2
+Solutions :
+Montrer la solution
+// sudoku.pas
+Backtracking (force brute) :
+Backtracking (force brute : optimisation de l'ordre des lignes) :
+Backtracking (recherche d'abord l'occupation forcée) :
+annulé
+résolu ! !
+ Solutions trouvées !!
+Logique :
+Rechercher et définir des valeurs clairement définies
+réduire les possibilités
+Traiter les doublons
+// sudoku.lfm
+Sudoku - solutions automatiques et manuelles
+Exemple
+Backtracking (force brute)
+Backtracking (force brute opimisée)
+Backtracking (d'abord forcé)
+Test logique
+Entrée utilisateur
+Afficher l'affectation forcée
+afficher les aides
+cacher les aides
+mettre à jour l'aide
+Initialiser
+Champ vide
+quitter le mode manuel

@@ -1,0 +1,339 @@
+english (by Deepl)
+Cross
+Plus
+Chimney
+Eight
+Pyramid
+Arrow-1
+Hercules
+Mirror
+Arrow-2
+Diamond
+Solitaire
+Solitaire 2
+//  BackMain.lfm
+Backtracking examples
+N - Queens problem
+Path of the knight
+Problem of the traveling salesman I
+Number puzzle
+House of Santa Claus
+Close
+Router with Lee algorithm
+Problem of the traveling salesman II
+Packing a backpack
+Four-color problem
+&ProgramInfo
+Labyrinth
+Sudoku
+//  n_Damen.pas
+Solution(s) for 
+No solution available
+ Solutions found
+There are 
+ independent solutions
+There were 
+ (max. 
+Remove all symmetrical solutions with respect to 
+the W-O axis
+the NW-SO axis
+the N-S axis
+the SW-NE axis
+the +90° rotation
+180° rotation
+270° rotation
+still 
+ Solution
+s
+//  n_Damen.lfm
+n-queens
+Determine independent solutions
+new test
+Number of queens: 
+find all solutions
+Show intermediate steps
+Start
+end
+//  springer.pas
+. Lsg
+found a solution
+1 solution found
+ Solutions found
+//  springer.lfm
+Start position:
+Column x
+Line y
+Size of the chessboard
+//  nikolaus.pas
+Search for a solution ...
+Search for solutions ..
+(One) solution found!
+//  nikolaus.lfm
+The house of St. Nicholas
+Trace the lines
+//  rundReis.pas
+Enter points
+current smallest length: %7.4f
+limit
+Length
+Initial length: %7.4f Final length: %7.4f
+//  rundReis.lfm
+Path of the traveling salesman I ( visit each city only once )
+Number of cities: 
+Method
+TA method
+SA method
+Complete search
+Enter cities
+Distances
+//  zahlraet.pas
+Value
+ Solution(s) found
+invalid character
+invalid operator
+too many symbols: (
+//  zahlraet.lfm
+optimized search
+Enter
+//  AlgoInfo.pas
+Information on the N queens problem
+The program uses the backtracking algorithm to try to place N queens on a board of size NxN in such a way that no queen can capture another according to the rules of chess.
+The field size n (1<=n<=16) can be freely determined.
+Independent solutions are those that cannot be transformed into each other by axis symmetry or rotations.
+Click on a solution to display it in the graphic.
+Information on the round trip of the knight
+The program tries to find a path for the knight from a given starting position so that each square is visited exactly once. The rules of the knight's move apply.
+see
+Caution: 
+The search can take a very long time! Therefore only select small fields!
+When you click on a solution with the mouse, the jumpers are animated in the graphic.
+Information on the circuit of the traveling salesman I
+The program attempts to determine a circular route in such a way that each location is only visited once and the route is as short as possible. It is assumed that all locations are connected!
+In addition to the backtracking method (complete search), two algorithms are implemented which do not use backtracking and do not always provide the shortest route. But they are much faster
+see c't January 1994
+Algorithms derived from the behavior of a melt during solidification.
+SA - Simulated Annealing Algorithm; Simulated Solidification (1983; IBM)
+TA - Threshold-Accepting-Algorithm
+Threshold acceptance (1990; IBM, Dueck, Scheuer) 
+BEGIN {SA or TA for minimization}
+select an initial configuration;
+choose an initial value T>0;
+REPEAT
+  REPEAT
+    select a new configuration, which is a small change of the
+    old configuration;
+    calculate the quality function Q of the new configuration;
+    DE:=Q(new)-Q(old);
+    IF DE<0
+       THEN old configuration:=new configuration
+       OTHERWISE IF random number<exp(-DE/(kT))
+             THEN old configuration:=new configuration
+    IF DE<T
+       THEN old configuration:=new configuration 
+  UNTIL long no reduction in quality;
+  reduce T;
+UNTIL no further reduction of the quality function at all;
+END.
+After clicking on an intermediate solution, the circular route is animated in the graphic.
+Information on the circular route of the traveling salesman II
+The program attempts to determine a circular route in such a way that the travel distance is as short as possible. Places may be visited several times and roads may be traveled in both directions.
+The locations and distances can be freely selected.
+An empty field or 0 in the distance matrix means: no connection.
+One-way streets are shown in yellow or aqua, depending on the direction.
+Information on solving the number puzzle
+As is usual with number puzzles, each letter represents a digit.
+The program searches for all solutions by trial and error.
+Information about Santa's house
+The program can find all solutions to the known problem
+The starting point is freely selectable
+After clicking on a solution, it is displayed animated in the graphic.
+Autorouting according to the Lee algorithm
+The program attempts to connect a number of points without crossing them.
+Practical background is e.g. the creation of a circuit board.
+Waves are sent out from the starting point until the end point is reached or no new wave front can be generated.
+In the first case, the path from the end point is traced back to the starting point (Lee algorithm). This is also the shortest path that can be generated.
+In the 2nd case - the end point was not reached - a previously determined path is deleted and a new attempt is started. (backtracking)
+(see e.g. c't 3/90 page 240)
+The second algorithm tries to find the path directly. Solutions are not always found! In addition, the time behavior is also worse.
+Four-color problem
+The program tries to color a number of areas with as few colors as possible in such a way that areas with a common border do not have the same color.
+Practical background is e.g. the creation of atlases (political maps).
+The underlying four-color problem was proven mathematically correct only some time ago.
+A maximum of 20 rectangular areas can be nested in the program. The condition is, however, that the areas remain contiguous.
+Backpack problem
+The program tries to pack a number of objects into a rucksack so that the total value of the objects is as large as possible for a given weight limit.
+Practical background is e.g. putting together a (flight) cargo.
+The solution can be found by an exhaustive search.
+A maximum of 20 items with different weights and values can be specified in the program. 
+The yellow rectangles represent the value, the red ones the weight.
+Way out of the labyrinth
+The program tries to find a way out of a maze. The starting position is shown in red, the exit in green
+The solution to the problem is attempted using both the backtracking method and the Lee algorithm. Solutions can also be found where the "always keep right" method fails, e.g. if the starting position is in the maze, or more precisely in a room that can be walked around.
+The backtracking algorithm is not as efficient as a direct comparison shows - especially if the path length is to be minimized! The time behavior is again dramatically worse if the corridors are made more than one unit wide.
+Note on the Lee algorithm:
+Waves are allowed to emanate from the start position until the output/end point is reached or no new wave front can be generated.
+In the first case, the path from the start/end point to the start position is retraced (Lee algorithm). This is also the shortest path that can be generated.
+In the 2nd case - the exit was not reached - there is no solution.
+Obstacles can be drawn with the left mouse button and dragging; obstacles can be removed with the right mouse button and dragging. Double-clicking on a free field places the starting point in this field; double-clicking on an obstacle creates the new exit/end point there.
+Solitaire problem
+The program tries to solve the board game "Solitaire" or some modifications. Without appropriate algorithms, the pure brute force methods take a lot of time.
+You can also try to find a solution manually
+If you move the mouse over a tile, it is colored green if a clear move is possible. Clicking on the tile then executes this move. If several moves are possible, the tile is colored red. You must then click on it and then click on the jump target
+The field outlined in red is the target field on which the last stone must be located.
+Attention: the solution of Solitaire 2 requires almost 2 billion test moves with the most effective methods of this program!
+The solution algorithms were based on the solution by David Dirkse.
+see:  David Dirkse, solitaire version 2, july, 2010, http://www.davdata.nl/math/peg-solitaire.html
+The first filter attempts to identify repetitive move sequences that cannot lead to the goal and thus to avoid them.
+The second filter evaluates the position. For example, no solution is possible if you have no more pieces with which you could jump to the end square.
+The program tries to solve a 3x3 Scramble Square™ puzzle. A very effective algorithm was presented in the computer magazine c''t 17/2023 page 130 ff. This is the basis for the demo program
+The images can be moved to a position in the square using drag and drop. (From there also back into the image bar). If you press the right mouse button, the image in the square under the mouse is rotated by 90°.
+The program tries to solve a Sudoku. In addition to the brute force approach, other improved approaches are available: An optimization where you start with the rows that have the most entries. a second optimization where the places for which there is only one possibility are treated first.
+ A fourth possibility is to solve the Sudoku by means of logic considerations (does not always provide a solution)
+In addition to the given examples, other Sudokus can also be entered
+//  RouteLee.pas
+Make connections
+Mark connections
+Sort points by connection path length
+//  RouteLee.lfm
+Router ( with Lee algorithm )
+Number of points to select
+Number of connections
+Random example 
+Lee-Algorithm
+//  rundweg2.pas
+Search canceled
+Circular route with shortest length: 
+No circular route found
+Invalid value for number of cities
+//  rundweg2.lfm
+Itinerary of the traveling salesman II ( each city can be visited several times )
+Enter distances
+//  Rucksack.pas
+Value: 
+  Weight: 
+Best solution: 
+ Solutions (first): 
+No
+weight
+Enter parts
+//  Rucksack.lfm
+Backpack
+Number of parts: 
+Total weight
+//  vierfarb.pas
+Mark country rectangles with the mouse in the upper part.
+Colorize
+Coloring found
+No coloring found: the algorithm is obviously faulty
+Country 
+color
+Search border for country 
+Cannot create border for country 
+ cannot create a border
+Search for borders finished
+Search borders and neighbors
+//  vierfarb.lfm
+4 color problem
+New input
+4 new countries
+Number of countries: 
+Add country
+Remove country
+//  backtrackinfo.lfm
+info
+Version 1.7 from 15.12.2023
+A collection of 13 demonstration programs for backtracking algorithms
+OK
+//  Labyrinth.pas
+Path length: 
+//  Labyrinth.lfm
+Exit 
+Start direction:
+Procedure
+Backtracking - straight ahead
+Backtracking - first right
+Backtracking - random
+Search for best solution
+Obstacle - left mouse button and drag
+free field - right mouse button and drag
+Start - double-click on free field
+Exit - double-click on obstacle
+NewStart
+//  solitaer.pas
+Cancel+Save
+End game
+Manual
+Continue
+time: 
+ ms
+so far 
+//  solitaer.lfm
+BruteForce recursive
+BruteForce recursively optimized
+BruteForce iterative
+BruteForce iterative with filter1
+BruteForce iterative with filter2
+BruteForce iterative, both filters
+normal
+spiral
+blockwise
+right - top - left - bottom
+top - left - bottom - right 
+left - down - right - up 
+bottom - right - top - left
+Sequence
+Counting
+Output assignment
+tested:
+Result
+show intermediate status
+show move sequence
+Undo move
+//  pausensteuerung.pas
+no pause
+delay 
+Pause length 
+decrease
+increase
+halve
+double
+//  pausensteuerung.lfm
+Pause length 256 ms
+Abort
+Default
+none
+//  puzzle3x3.pas
+1 solution found
+Part no.
+Rotation
+//  puzzle3x3.lfm
+Switch dark/light
+Example 2
+Solutions:
+Show solution
+//  sudoku.pas
+Backtracking (brute force):
+Backtracking (brute force: sequence of lines optimized):
+Backtracking (search brute force first):
+canceled
+solved !!!
+ Solutions found !!!
+Logic:
+Search for and set clearly defined values
+Reduce possibilities
+Handle duplicates
+//  sudoku.lfm
+Sudoku - automatic and manual solutions
+Example of
+Backtracking (Brute Force)
+Backtracking (brute force optimized)
+Backtracking (brute force first)
+Logic test
+User input
+Show forced assignment
+show help
+hide help
+update help
+Initialize
+Empty field
+Exit manual mode

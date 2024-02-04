@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="22">
+      <Unit0>
+        <Filename Value="BackTrackDemo.dpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="4"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="BackMain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="18"/>
+        <CursorPos Y="19"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="n_Damen.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NDameForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="8"/>
+        <CursorPos X="34" Y="8"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="springer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SpringerForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="23"/>
+        <CursorPos X="5" Y="23"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="nikolaus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NikolausForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="79"/>
+        <CursorPos X="7" Y="84"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="rundreise.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TravelForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="rundReise"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="761"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="zahlraet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Zahlenraetsel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="98"/>
+        <CursorPos X="6" Y="149"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="AlgoInfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="InfoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="14"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="RouteLee.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RouterForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="505"/>
+        <CursorPos X="65" Y="526"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="rundweg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RundwegForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="477"/>
+        <CursorPos X="13" Y="506"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="Rucksack.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RucksackForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="169"/>
+        <CursorPos X="25" Y="191"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="vierfarb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VierFarbForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="126"/>
+        <CursorPos Y="171"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="BildSchirmAnpassung.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="11"/>
+        <CursorPos Y="47"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="BackTrackInfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutBox"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Labyrinth.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LabyForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="586"/>
+        <CursorPos X="25" Y="609"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="solitaer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSolitaer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="34" Y="8"/>
+        <FoldState Value=" T3mK0U5 pj6k503514 pkBke2j312 plbnV0931124]D9o20%]MofkK484]rTiB4J01];ifoL0E2 PiKiB04"/>
+        <UsageCount Value="208"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="pausensteuerung.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FramePausenStrg"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="69"/>
+        <CursorPos X="69" Y="72"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="puzzle3x3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PuzzleForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="201"/>
+        <CursorPos Y="259"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="puzzledef.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="puzzleDef"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="133"/>
+        <CursorPos Y="169"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="puzzledragunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="puzzleDragUnit"/>
+        <EditorIndex Value="10"/>
+        <CursorPos X="25" Y="19"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="sudoku.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SudokuForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="116"/>
+        <CursorPos X="13" Y="125"/>
+        <UsageCount Value="223"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="BackTrackDemo_Sprache.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="513"/>
+        <CursorPos Y="549"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit21>
+    </Units>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="brettVorgabe"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

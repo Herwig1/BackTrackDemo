@@ -1,0 +1,253 @@
+object VierFarbForm: TVierFarbForm
+  Left = 0
+  Height = 640
+  Top = 0
+  Width = 836
+  Caption = '4 Farbenproblem'
+  ClientHeight = 640
+  ClientWidth = 836
+  Font.Color = clWindowText
+  Font.Height = -17
+  Font.Name = 'MS Sans Serif'
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.2.0.4'
+  object PanelBeendenCommand: TPanel
+    Left = 0
+    Height = 41
+    Top = 599
+    Width = 836
+    Align = alBottom
+    ClientHeight = 41
+    ClientWidth = 836
+    TabOrder = 0
+    OnResize = PanelBeendenCommandResize
+    object BitBtnBeenden: TBitBtn
+      Left = 658
+      Height = 31
+      Top = 4
+      Width = 144
+      Caption = 'beenden'
+      Kind = bkClose
+      TabOrder = 0
+    end
+  end
+  object PanelBrett: TPanel
+    Left = 0
+    Height = 599
+    Top = 0
+    Width = 524
+    Align = alClient
+    ClientHeight = 599
+    ClientWidth = 524
+    TabOrder = 1
+    object PaintBox1: TPaintBox
+      Left = 1
+      Height = 556
+      Top = 1
+      Width = 419
+      Align = alClient
+      Color = clBtnFace
+      ParentColor = False
+      OnMouseDown = PaintBox1MouseDown
+      OnMouseMove = PaintBox1MouseMove
+      OnMouseUp = PaintBox1MouseUp
+      OnPaint = PaintBox1Paint
+    end
+    object Bevel1: TBevel
+      Left = 0
+      Height = 11
+      Top = 254
+      Width = 415
+    end
+    object PaintBox2: TPaintBox
+      Left = 420
+      Height = 556
+      Top = 1
+      Width = 103
+      Align = alRight
+      OnPaint = PaintBox2Paint
+    end
+    object PanelEdit: TPanel
+      Left = 1
+      Height = 41
+      Top = 557
+      Width = 522
+      Align = alBottom
+      ClientHeight = 41
+      ClientWidth = 522
+      TabOrder = 0
+      object edit1: TEdit
+        Left = 8
+        Height = 33
+        Top = 7
+        Width = 493
+        TabOrder = 0
+      end
+    end
+  end
+  object PanelRechts: TPanel
+    Left = 524
+    Height = 599
+    Top = 0
+    Width = 312
+    Align = alRight
+    ClientHeight = 599
+    ClientWidth = 312
+    TabOrder = 2
+    object StringGrid1: TStringGrid
+      Left = 1
+      Height = 274
+      Top = 1
+      Width = 310
+      Align = alClient
+      ColCount = 2
+      DefaultColWidth = 100
+      DefaultDrawing = False
+      FixedCols = 0
+      Options = [goFixedVertLine, goFixedHorzLine]
+      RowCount = 10
+      TabOrder = 0
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -17
+      TitleFont.Name = 'MS Sans Serif'
+      OnDrawCell = StringGrid1DrawCell
+    end
+    object PanelStartVorbereiten: TPanel
+      Left = 1
+      Height = 168
+      Top = 275
+      Width = 310
+      Align = alBottom
+      ClientHeight = 168
+      ClientWidth = 310
+      TabOrder = 1
+      object SpeedButtonNewInput: TSpeedButton
+        Tag = 1
+        Left = 4
+        Height = 31
+        Top = 37
+        Width = 144
+        AllowAllUp = True
+        Caption = 'Neue Eingabe'
+        GroupIndex = 1
+        OnClick = SpeedButtonNewInputClick
+      end
+      object SpeedButton4NewCountries: TSpeedButton
+        Tag = 1
+        Left = 158
+        Height = 31
+        Top = 37
+        Width = 144
+        AllowAllUp = True
+        Caption = '4 neue Länder'
+        GroupIndex = 2
+        OnClick = SpeedButton4NewCountriesClick
+      end
+      object StaticText1: TStaticText
+        Left = 18
+        Height = 24
+        Top = 8
+        Width = 198
+        Caption = 'Anzahl der Länder: '
+        TabOrder = 0
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 224
+        Height = 32
+        Top = 0
+        Width = 71
+        AutoSize = False
+        MaxValue = 50
+        MinValue = 3
+        OnChange = SpinEdit1Change
+        TabOrder = 1
+        Value = 5
+      end
+      object CheckBoxZwischenSchritt: TCheckBox
+        Left = 8
+        Height = 25
+        Top = 99
+        Width = 233
+        Caption = 'Zwischenschritte zeigen'
+        Checked = True
+        OnClick = CheckBoxZwischenSchrittClick
+        State = cbChecked
+        TabOrder = 2
+      end
+      object ButtonAddCountry: TButton
+        Left = 4
+        Height = 21
+        Top = 74
+        Width = 144
+        Caption = 'Land zufügen'
+        OnClick = ButtonAddCountryClick
+        TabOrder = 3
+      end
+      object ButtonRemoveCountry: TButton
+        Left = 158
+        Height = 21
+        Top = 74
+        Width = 144
+        Caption = 'Land entfernen'
+        OnClick = ButtonRemoveCountryClick
+        TabOrder = 4
+      end
+      object ButtonStart: TBitBtn
+        Left = 75
+        Height = 31
+        Top = 126
+        Width = 164
+        Caption = 'Starten'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          000004733AFF21824FFF638272FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+          A3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+          47FF889C92FF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+          9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+          77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+          78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+          9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+          49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+          C3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = ButtonStartClick
+        TabOrder = 5
+      end
+    end
+    inline FramePausenStrg1: TFramePausenStrg
+      Left = 1
+      Top = 443
+      Width = 310
+      Align = alBottom
+      ClientWidth = 310
+      TabOrder = 2
+      Visible = False
+    end
+  end
+end

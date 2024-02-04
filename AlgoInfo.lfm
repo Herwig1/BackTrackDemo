@@ -1,0 +1,47 @@
+object InfoForm: TInfoForm
+  Left = 36
+  Height = 565
+  Top = 3
+  Width = 744
+  Caption = 'InfoForm'
+  ClientHeight = 565
+  ClientWidth = 744
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '3.0.0.2'
+  object Memo1: TMemo
+    Left = 0
+    Height = 520
+    Top = 0
+    Width = 744
+    Align = alClient
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 45
+    Top = 520
+    Width = 744
+    Align = alBottom
+    ClientHeight = 45
+    ClientWidth = 744
+    TabOrder = 1
+    object BitBtnBeenden: TBitBtn
+      Left = 562
+      Height = 30
+      Top = 6
+      Width = 149
+      Caption = 'beenden'
+      Kind = bkClose
+      TabOrder = 0
+    end
+  end
+end

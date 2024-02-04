@@ -1,0 +1,344 @@
+object MainForm: TMainForm
+  Left = 104
+  Height = 509
+  Top = 138
+  Width = 800
+  Caption = 'Backtracking Beispiele'
+  ClientHeight = 509
+  ClientWidth = 800
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -20
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Icon.Data = {
+    FE0200000000010001002020100000000000E802000016000000280000002000
+    0000400000000100040000000000800200000000000000000000000000000000
+    000000000000000080000080000000808000800000008000800080800000C0C0
+    C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+    FF00777777777777777777777777799777777777777777777777777777779999
+    7777777777777777777777777779999997777777777777777777777777777997
+    777777777777777777777888888889988887777777777777777F000000000990
+    0087777777777777777F077777777997708777777777777ECCCCC77777777997
+    708777777777777ECCCCCC7777777997708777777777778EC88F077777777997
+    708777777777FECCCCCF077777777997708777777777F0ECCC7F077777777777
+    708777777777F07EC77F07777777777770877777ECCCCC77777F077777777777
+    70877777ECCCCCC7777F07777777777770877778EC88F077777F077777777777
+    70877FECCCCCF077777F07777777777770877F0ECCC7F077777F077A77777777
+    70877F07EC77F077777F07A22777777770877F077777F077777F0A2222000000
+    00777F077777F077777FFFA22FFFFFFFFF777F077777F077777777A227087777
+    77777F077777F0777A7777A22708777777777F077777F077A227777777087777
+    77777F077777F00A222200000007777777777F077777FFFFA22FFFFFFFF77777
+    77777F0777777777A22708777777777777777F0777777777A227087777777777
+    77777F0777777777A22708777777777777777F07777777777777087777777777
+    77777F0000000000000007777777777777777FFFFFFFFFFFFFFFF77777777777
+    7777000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Button1: TButton
+    Left = 8
+    Height = 60
+    Top = 20
+    Width = 321
+    Caption = 'N - Damen Problem'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 408
+    Height = 60
+    Top = 20
+    Width = 321
+    Caption = 'Weg des Springers'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 8
+    Height = 61
+    Top = 92
+    Width = 321
+    Caption = 'Problem des Handlungreisenden I'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object ButtonZahlenraetsel: TButton
+    Left = 8
+    Height = 60
+    Top = 236
+    Width = 321
+    Caption = 'Zahlenrätsel'
+    OnClick = ButtonZahlenraetselClick
+    TabOrder = 3
+  end
+  object Button5: TButton
+    Left = 8
+    Height = 60
+    Top = 163
+    Width = 321
+    Caption = 'Haus vom Nikolaus'
+    OnClick = Button5Click
+    TabOrder = 4
+  end
+  object BitBtnBeenden: TBitBtn
+    Left = 618
+    Height = 40
+    Top = 457
+    Width = 164
+    Caption = 'Schließen'
+    Kind = bkClose
+    ModalResult = 11
+    TabOrder = 5
+  end
+  object BitBtnHelp1: TBitBtn
+    Tag = 1
+    Left = 330
+    Height = 60
+    Top = 20
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 6
+  end
+  object BitBtnHelp2: TBitBtn
+    Tag = 2
+    Left = 730
+    Height = 60
+    Top = 20
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 7
+  end
+  object BitBtnHelp3: TBitBtn
+    Tag = 3
+    Left = 330
+    Height = 61
+    Top = 92
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 8
+  end
+  object BitBtnHelp7: TBitBtn
+    Tag = 4
+    Left = 330
+    Height = 60
+    Top = 236
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 9
+  end
+  object BitBtnHelp5: TBitBtn
+    Tag = 5
+    Left = 330
+    Height = 60
+    Top = 163
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 10
+  end
+  object Button6: TButton
+    Left = 408
+    Height = 60
+    Top = 163
+    Width = 321
+    Caption = 'Router mit Lee-Algorithmus'
+    OnClick = Button6Click
+    TabOrder = 11
+  end
+  object BitBtnHelp6: TBitBtn
+    Tag = 6
+    Left = 730
+    Height = 60
+    Top = 163
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 12
+  end
+  object Button4: TButton
+    Left = 408
+    Height = 61
+    Top = 92
+    Width = 321
+    Caption = 'Problem des Handlungreisenden II'
+    OnClick = Button4Click
+    TabOrder = 13
+  end
+  object BitBtnHelp4: TBitBtn
+    Tag = 7
+    Left = 730
+    Height = 61
+    Top = 92
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 14
+  end
+  object ButtonRucksack: TButton
+    Left = 8
+    Height = 61
+    Top = 306
+    Width = 321
+    Caption = 'Rucksack packen'
+    OnClick = ButtonRucksackClick
+    TabOrder = 15
+  end
+  object ButtonVierfarb: TButton
+    Left = 408
+    Height = 60
+    Top = 236
+    Width = 321
+    Caption = 'Vierfarbenproblem'
+    OnClick = ButtonVierfarbClick
+    TabOrder = 16
+  end
+  object BitBtnHelp8: TBitBtn
+    Tag = 8
+    Left = 730
+    Height = 60
+    Top = 236
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 17
+  end
+  object BitBtnHelp9: TBitBtn
+    Tag = 9
+    Left = 330
+    Height = 60
+    Top = 306
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 18
+  end
+  object BitBtnAbout: TBitBtn
+    Left = 408
+    Height = 41
+    Top = 457
+    Width = 185
+    Caption = '&ProgrammInfo'
+    Default = True
+    Glyph.Data = {
+      DE010000424DDE01000000000000760000002800000024000000120000000100
+      0400000000006801000000000000000000001000000000000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333330000333333333333333333333333F33333333333
+      00003333344333333333333333388F3333333333000033334224333333333333
+      338338F3333333330000333422224333333333333833338F3333333300003342
+      222224333333333383333338F3333333000034222A22224333333338F338F333
+      8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+      33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+      0000333333333A222433333333333338F338F33300003333333333A222433333
+      333333338F338F33000033333333333A222433333333333338F338F300003333
+      33333333A222433333333333338F338F00003333333333333A22433333333333
+      3338F38F000033333333333333A223333333333333338F830000333333333333
+      333A333333333333333338330000333333333333333333333333333333333333
+      0000
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnAboutClick
+    TabOrder = 19
+  end
+  object Button10: TButton
+    Left = 8
+    Height = 60
+    Top = 376
+    Width = 321
+    Caption = 'Labyrinth'
+    OnClick = Button10Click
+    TabOrder = 20
+  end
+  object BitBtnHelp10: TBitBtn
+    Tag = 10
+    Left = 330
+    Height = 60
+    Top = 376
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 21
+  end
+  object ButtonSolitaer: TButton
+    Left = 408
+    Height = 60
+    Top = 304
+    Width = 321
+    Caption = 'Solitär'
+    OnClick = ButtonSolitaerClick
+    TabOrder = 22
+  end
+  object BitBtnHelp11: TBitBtn
+    Tag = 11
+    Left = 730
+    Height = 60
+    Top = 304
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 23
+  end
+  object ButtonPuzzle: TButton
+    Left = 408
+    Height = 60
+    Top = 376
+    Width = 321
+    Caption = '3x3 Scramble Square™ puzzle'
+    OnClick = ButtonPuzzleClick
+    TabOrder = 24
+  end
+  object BitBtnHelp12: TBitBtn
+    Tag = 12
+    Left = 730
+    Height = 60
+    Top = 376
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 25
+  end
+  object ButtonSudoku: TButton
+    Left = 8
+    Height = 60
+    Top = 442
+    Width = 321
+    Caption = 'Sudoku'
+    OnClick = ButtonSudokuClick
+    TabOrder = 26
+  end
+  object BitBtnHelp13: TBitBtn
+    Tag = 13
+    Left = 330
+    Height = 60
+    Top = 442
+    Width = 52
+    Kind = bkHelp
+    Layout = blGlyphTop
+    OnClick = BitBtnHelp1Click
+    TabOrder = 27
+  end
+end

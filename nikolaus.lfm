@@ -1,0 +1,250 @@
+object NikolausForm: TNikolausForm
+  Left = 153
+  Height = 672
+  Top = 0
+  Width = 829
+  Caption = 'Das Haus vom Nikolaus'
+  ClientHeight = 672
+  ClientWidth = 829
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'MS Sans Serif'
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Panel4: TPanel
+    Left = 0
+    Height = 632
+    Top = 0
+    Width = 829
+    Align = alClient
+    ClientHeight = 632
+    ClientWidth = 829
+    TabOrder = 1
+    object Panel5: TPanel
+      Left = 505
+      Height = 630
+      Top = 1
+      Width = 323
+      Align = alClient
+      ClientHeight = 630
+      ClientWidth = 323
+      TabOrder = 0
+      object PanelStart: TPanel
+        Left = 1
+        Height = 189
+        Top = 440
+        Width = 321
+        Align = alBottom
+        ClientHeight = 189
+        ClientWidth = 321
+        TabOrder = 0
+        object Label2: TLabel
+          Left = 18
+          Height = 21
+          Top = 12
+          Width = 116
+          Caption = 'Startposition:'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'MS Sans Serif'
+          ParentFont = False
+        end
+        object CheckBoxAlleLsgSuchen: TCheckBox
+          Left = 18
+          Height = 25
+          Top = 52
+          Width = 209
+          Caption = 'alle Lösungen suchen'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'MS Sans Serif'
+          ParentFont = False
+          TabOrder = 0
+        end
+        object SpinEditStartPos: TSpinEdit
+          Left = 152
+          Height = 33
+          Top = 8
+          Width = 50
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'MS Sans Serif'
+          MaxValue = 5
+          MinValue = 1
+          OnChange = SpinEditStartPosChange
+          ParentFont = False
+          TabOrder = 1
+          Value = 1
+        end
+        object CheckBoxLinieNachfahren: TCheckBox
+          Left = 18
+          Height = 25
+          Top = 116
+          Width = 178
+          Caption = 'Linien nachfahren'
+          Checked = True
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'MS Sans Serif'
+          ParentFont = False
+          State = cbChecked
+          TabOrder = 2
+        end
+        object ButtonStart: TBitBtn
+          Left = 88
+          Height = 30
+          Top = 152
+          Width = 136
+          Caption = 'Starten'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'MS Sans Serif'
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000000000000000
+            000004733AFF21824FFF638272FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+            A3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+            47FF889C92FF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+            9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+            77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+            78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+            9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+            49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+            C3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = ButtonStartClick
+          ParentFont = False
+          TabOrder = 3
+        end
+        object CheckBoxZwischenSchritt: TCheckBox
+          Left = 18
+          Height = 23
+          Top = 84
+          Width = 209
+          Caption = 'Zwischenschritte zeigen'
+          Checked = True
+          OnClick = CheckBoxZwischenSchrittClick
+          State = cbChecked
+          TabOrder = 4
+        end
+      end
+      object Memo1: TMemo
+        Cursor = crHandPoint
+        Left = 1
+        Height = 277
+        Top = 1
+        Width = 321
+        Align = alClient
+        OnClick = Memo1Click
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 1
+        WordWrap = False
+      end
+      inline FramePausenStrg1: TFramePausenStrg
+        Left = 1
+        Height = 162
+        Top = 278
+        Width = 321
+        Align = alBottom
+        ClientHeight = 162
+        ClientWidth = 321
+        TabOrder = 2
+        Visible = False
+      end
+    end
+    object Panel6: TPanel
+      Left = 1
+      Height = 630
+      Top = 1
+      Width = 500
+      Align = alLeft
+      ClientHeight = 630
+      ClientWidth = 500
+      TabOrder = 1
+      object paintbox1: TPaintBox
+        Left = 1
+        Height = 567
+        Top = 1
+        Width = 498
+        Align = alClient
+        Color = clWhite
+        ParentColor = False
+        ParentShowHint = False
+        OnPaint = paintbox1Paint
+      end
+      object Panel7: TPanel
+        Left = 1
+        Height = 61
+        Top = 568
+        Width = 498
+        Align = alBottom
+        ClientHeight = 61
+        ClientWidth = 498
+        TabOrder = 0
+        object edit1: TEdit
+          Left = 8
+          Height = 31
+          Top = 15
+          Width = 480
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'MS Sans Serif'
+          ParentFont = False
+          TabOrder = 0
+        end
+      end
+    end
+    object Splitter1: TSplitter
+      Left = 501
+      Height = 630
+      Top = 1
+      Width = 4
+    end
+  end
+  object PanelBeendenCommand: TPanel
+    Left = 0
+    Height = 40
+    Top = 632
+    Width = 829
+    Align = alBottom
+    ClientHeight = 40
+    ClientWidth = 829
+    TabOrder = 0
+    OnResize = PanelBeendenCommandResize
+    object BitBtnBeenden: TBitBtn
+      Left = 638
+      Height = 31
+      Top = 2
+      Width = 139
+      Caption = 'beenden'
+      Kind = bkClose
+      TabOrder = 0
+    end
+  end
+end

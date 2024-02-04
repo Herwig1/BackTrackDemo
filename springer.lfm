@@ -1,0 +1,266 @@
+object SpringerForm: TSpringerForm
+  Left = 516
+  Height = 585
+  Top = 166
+  Width = 664
+  Caption = 'Weg des Springers'
+  ClientHeight = 585
+  ClientWidth = 664
+  Constraints.MinHeight = 550
+  Constraints.MinWidth = 300
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'MS Sans Serif'
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Splitter1: TSplitter
+    Left = 375
+    Height = 553
+    Top = 0
+    Width = 9
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object PanelOptionen: TPanel
+    Left = 384
+    Height = 553
+    Top = 0
+    Width = 280
+    Align = alRight
+    ClientHeight = 553
+    ClientWidth = 280
+    TabOrder = 1
+    object StringGrid1: TStringGrid
+      Left = 1
+      Height = 251
+      Top = 1
+      Width = 278
+      Align = alClient
+      ColCount = 1
+      DefaultColWidth = 272
+      FixedCols = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine]
+      RowCount = 25
+      TabOrder = 0
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -14
+      TitleFont.Name = 'MS Sans Serif'
+      OnClick = StringGrid1Click
+      ColWidths = (
+        403
+      )
+    end
+    object PanelStart: TPanel
+      Left = 1
+      Height = 152
+      Top = 400
+      Width = 278
+      Align = alBottom
+      ClientHeight = 152
+      ClientWidth = 278
+      TabOrder = 1
+      object Label2: TLabel
+        Left = 14
+        Height = 17
+        Top = 29
+        Width = 95
+        Caption = 'Startposition:'
+      end
+      object Label3: TLabel
+        Left = 14
+        Height = 17
+        Top = 53
+        Width = 57
+        Caption = 'Spalte x'
+      end
+      object Label4: TLabel
+        Left = 144
+        Height = 17
+        Top = 53
+        Width = 48
+        Caption = 'Zeile y'
+      end
+      object StaticText1: TStaticText
+        Left = 6
+        Height = 19
+        Top = 6
+        Width = 170
+        AutoSize = True
+        Caption = 'Größe des Schachbretts'
+        TabOrder = 0
+      end
+      object SpinEditN: TSpinEdit
+        Left = 192
+        Height = 26
+        Top = 1
+        Width = 56
+        AutoSize = False
+        MaxValue = 16
+        MinValue = 1
+        OnChange = SpinEditNChange
+        TabOrder = 1
+        Value = 5
+      end
+      object CheckBoxAlleLsgSuchen: TCheckBox
+        Left = 14
+        Height = 23
+        Top = 100
+        Width = 180
+        Caption = 'alle Lösungen suchen'
+        TabOrder = 2
+      end
+      object SpinEditX: TSpinEdit
+        Left = 80
+        Height = 29
+        Top = 48
+        Width = 40
+        MaxValue = 16
+        MinValue = 1
+        OnChange = SpinEditNChange
+        TabOrder = 3
+        Value = 1
+      end
+      object SpinEditY: TSpinEdit
+        Left = 216
+        Height = 29
+        Top = 48
+        Width = 41
+        MaxValue = 16
+        MinValue = 1
+        OnChange = SpinEditNChange
+        TabOrder = 4
+        Value = 1
+      end
+      object CheckBoxZwischenSchritt: TCheckBox
+        Left = 14
+        Height = 23
+        Top = 80
+        Width = 197
+        Caption = 'Zwischenschritte zeigen'
+        OnClick = CheckBoxZwischenSchrittClick
+        TabOrder = 5
+      end
+      object ButtonStart: TBitBtn
+        Left = 40
+        Height = 32
+        Top = 120
+        Width = 180
+        Caption = 'Starten'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          000004733AFF21824FFF638272FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+          A3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+          47FF889C92FF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+          9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+          77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+          78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+          9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+          49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+          C3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = ButtonStartClick
+        TabOrder = 6
+      end
+    end
+    inline FramePausenStrg1: TFramePausenStrg
+      Left = 1
+      Height = 148
+      Top = 252
+      Align = alBottom
+      ClientHeight = 148
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object PanelBrett: TPanel
+    Left = 0
+    Height = 553
+    Top = 0
+    Width = 375
+    Align = alClient
+    ClientHeight = 553
+    ClientWidth = 375
+    TabOrder = 0
+    OnResize = PanelBrettResize
+    object PaintBox1: TPaintBox
+      Left = 8
+      Height = 336
+      Top = 8
+      Width = 336
+      Color = clBtnFace
+      ParentColor = False
+      OnPaint = PaintBox1Paint
+    end
+    object PanelEdit: TPanel
+      Left = 1
+      Height = 55
+      Top = 497
+      Width = 373
+      Align = alBottom
+      ClientHeight = 55
+      ClientWidth = 373
+      TabOrder = 0
+      object edit1: TEdit
+        Left = 8
+        Height = 29
+        Top = 8
+        Width = 338
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object LabelShowSolution: TLabel
+      Left = 8
+      Height = 17
+      Top = 360
+      Width = 135
+      Caption = 'LabelShowSolution'
+    end
+  end
+  object PanelBeendenCommand: TPanel
+    Left = 0
+    Height = 32
+    Top = 553
+    Width = 664
+    Align = alBottom
+    ClientHeight = 32
+    ClientWidth = 664
+    TabOrder = 3
+    OnResize = PanelBeendenCommandResize
+    object BitBtnBeenden: TBitBtn
+      Left = 491
+      Height = 25
+      Top = 3
+      Width = 111
+      Caption = 'beenden'
+      Kind = bkClose
+      TabOrder = 0
+    end
+  end
+end

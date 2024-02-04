@@ -1,0 +1,416 @@
+object FormSolitaer: TFormSolitaer
+  Left = 659
+  Height = 626
+  Top = 122
+  Width = 789
+  Caption = 'Solitär'
+  ClientHeight = 626
+  ClientWidth = 789
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'MS Sans Serif'
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object PanelBeendenCommand: TPanel
+    Left = 0
+    Height = 41
+    Top = 585
+    Width = 789
+    Align = alBottom
+    ClientHeight = 41
+    ClientWidth = 789
+    TabOrder = 0
+    OnResize = PanelBeendenCommandResize
+    object BitBtnBeenden: TBitBtn
+      Left = 568
+      Height = 31
+      Top = 4
+      Width = 144
+      Caption = 'beenden'
+      Kind = bkClose
+      ModalResult = 11
+      TabOrder = 0
+    end
+    object LabelAnzLsg: TLabel
+      Left = 17
+      Height = 16
+      Top = 7
+      Width = 78
+      Caption = 'LabelAnzLsg'
+    end
+  end
+  object PanelOben: TPanel
+    Left = 0
+    Height = 585
+    Top = 0
+    Width = 789
+    Align = alClient
+    ClientHeight = 585
+    ClientWidth = 789
+    TabOrder = 1
+    object PanelCommand: TPanel
+      Left = 480
+      Height = 583
+      Top = 1
+      Width = 308
+      Align = alRight
+      ClientHeight = 583
+      ClientWidth = 308
+      TabOrder = 0
+      object PanelVorbereiten: TPanel
+        Left = 1
+        Height = 183
+        Top = 1
+        Width = 306
+        Align = alTop
+        ClientHeight = 183
+        ClientWidth = 306
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+        object ComboBoxVerfahren: TComboBox
+          Left = 86
+          Height = 24
+          Top = 68
+          Width = 210
+          ItemHeight = 16
+          ItemIndex = 0
+          Items.Strings = (
+            'BruteForce rekursiv'
+            'BruteForce rekursiv optimiert'
+            'BruteForce iterativ'
+            'BruteForce iterativ mit Filter1'
+            'BruteForce iterativ mit Filter2'
+            'BruteForce iterativ, beide Filter'
+          )
+          Style = csDropDownList
+          TabOrder = 0
+          Text = 'BruteForce rekursiv'
+        end
+        object ComboBoxBrettFormat: TComboBox
+          Left = 128
+          Height = 24
+          Top = 9
+          Width = 168
+          ItemHeight = 16
+          Style = csDropDownList
+          TabOrder = 1
+          OnChange = ComboBoxBrettFormatChange
+        end
+        object ComboBoxBrettNumerierung: TComboBox
+          Left = 86
+          Height = 24
+          Top = 37
+          Width = 210
+          ItemHeight = 16
+          ItemIndex = 0
+          Items.Strings = (
+            'normal'
+            'spiralförmig'
+            'blockweise'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'normal'
+          OnChange = ComboBoxBrettNumerierungChange
+        end
+        object ComboBoxReihenfolge: TComboBox
+          Left = 86
+          Height = 24
+          Top = 96
+          Width = 210
+          ItemHeight = 16
+          ItemIndex = 0
+          Items.Strings = (
+            'rechts - oben - links - unten'
+            'oben - links - unten - rechts '
+            'links - unten - rechts - oben '
+            'unten - rechts - oben - links'
+          )
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'rechts - oben - links - unten'
+        end
+        object CheckBoxAll: TCheckBox
+          Left = 9
+          Height = 20
+          Top = 152
+          Width = 148
+          Caption = 'alle Lösungen suchen'
+          TabOrder = 4
+        end
+        object CheckBoxZwischenSchritt: TCheckBox
+          Left = 9
+          Height = 20
+          Top = 128
+          Width = 159
+          Caption = 'Zwischenschritte zeigen'
+          Checked = True
+          State = cbChecked
+          TabOrder = 5
+          OnClick = CheckBoxZwischenSchrittClick
+        end
+        object Label1: TLabel
+          Left = 9
+          Height = 16
+          Top = 72
+          Width = 53
+          Caption = 'Methode'
+        end
+        object Label2: TLabel
+          Left = 7
+          Height = 16
+          Top = 99
+          Width = 73
+          Caption = 'Reihenfolge'
+        end
+        object Label3: TLabel
+          Left = 7
+          Height = 16
+          Top = 39
+          Width = 48
+          Caption = 'Zählung'
+        end
+        object Label4: TLabel
+          Left = 7
+          Height = 16
+          Top = 12
+          Width = 118
+          Caption = 'Ausgangsbelegung'
+        end
+      end
+      object PanelPlayCommand: TPanel
+        Left = 1
+        Height = 168
+        Top = 257
+        Width = 306
+        Align = alBottom
+        ClientHeight = 168
+        ClientWidth = 306
+        ParentColor = False
+        TabOrder = 1
+        Visible = False
+        object LabelAnzahlTests: TLabel
+          Left = 136
+          Height = 16
+          Top = 136
+          Width = 7
+          Caption = '0'
+        end
+        object LabelTestet: TLabel
+          Left = 16
+          Height = 16
+          Top = 136
+          Width = 51
+          Caption = 'getestet:'
+        end
+        object LabelMrd: TLabel
+          Left = 86
+          Height = 16
+          Top = 135
+          Width = 44
+          Alignment = taRightJustify
+          AutoSize = False
+        end
+        object ButtonErgebnis: TButton
+          Left = 8
+          Height = 32
+          Top = 89
+          Width = 136
+          Caption = 'Ergebnis'
+          TabOrder = 0
+          Visible = False
+          OnClick = ButtonErgebnisClick
+        end
+        object ButtonAbbruchUndSpeichern: TButton
+          Left = 152
+          Height = 33
+          Top = 88
+          Width = 148
+          Caption = 'Abbruch+Speichern'
+          TabOrder = 1
+          OnClick = ButtonAbbruchUndSpeichernClick
+        end
+        object ButtonZeigeZwischenStand: TButton
+          Left = 2
+          Height = 32
+          Top = 40
+          Width = 148
+          Caption = 'zeige Zwischenstand'
+          TabOrder = 2
+          OnClick = ButtonZeigeZwischenStandClick
+        end
+        object ButtonZeigeZugFolge: TButton
+          Left = 152
+          Height = 32
+          Top = 40
+          Width = 148
+          Caption = 'zeige ZugFolge'
+          TabOrder = 3
+          OnClick = ButtonZeigeZugFolgeClick
+        end
+      end
+      object ButtonZugZurueck: TButton
+        Left = 2
+        Height = 33
+        Top = 240
+        Width = 148
+        Caption = 'Zug zurücknehmen'
+        TabOrder = 2
+        Visible = False
+        OnClick = ButtonZugZurueckClick
+      end
+      object PanelStart: TPanel
+        Left = 1
+        Height = 40
+        Top = 184
+        Width = 306
+        Align = alTop
+        ClientHeight = 40
+        ClientWidth = 306
+        TabOrder = 3
+        object ButtonManuell: TButton
+          Left = 0
+          Height = 33
+          Top = 4
+          Width = 144
+          Caption = 'Manuell'
+          TabOrder = 0
+          OnClick = ButtonManuellClick
+        end
+        object ButtonAutoPlay: TBitBtn
+          Left = 160
+          Height = 33
+          Top = 4
+          Width = 140
+          Caption = 'Starten'
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000000000000000
+            000004733AFF21824FFF638272FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+            A3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+            47FF889C92FF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+            9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+            77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+            78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+            9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+            49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+            C3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = ButtonAutoPlayClick
+          TabOrder = 1
+        end
+      end
+      inline FramePausenStrg1: TFramePausenStrg
+        Left = 1
+        Height = 157
+        Top = 425
+        Width = 306
+        Align = alBottom
+        ClientHeight = 157
+        ClientWidth = 306
+        TabOrder = 4
+        Visible = False
+      end
+    end
+    object Splitter1: TSplitter
+      Left = 474
+      Height = 583
+      Top = 1
+      Width = 6
+      Align = alRight
+      MinSize = 5
+      ResizeAnchor = akRight
+    end
+    object PanelLeftSide: TPanel
+      Left = 1
+      Height = 583
+      Top = 1
+      Width = 473
+      Align = alClient
+      ClientHeight = 583
+      ClientWidth = 473
+      TabOrder = 2
+      object Memo1: TMemo
+        Left = 1
+        Height = 205
+        Top = 377
+        Width = 471
+        Align = alBottom
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 0
+        WordWrap = False
+        OnClick = Memo1Click
+      end
+      object PanelPaintBox: TPanel
+        Left = 1
+        Height = 376
+        Top = 1
+        Width = 471
+        Align = alClient
+        ClientHeight = 376
+        ClientWidth = 471
+        TabOrder = 1
+        object PaintBox1: TPaintBox
+          Left = 1
+          Height = 374
+          Top = 1
+          Width = 355
+          Align = alClient
+          OnClick = PaintBox1Click
+          OnMouseMove = PaintBox1MouseMove
+          OnPaint = PaintBox1Paint
+        end
+        object ListBox1: TListBox
+          Left = 356
+          Height = 374
+          Top = 1
+          Width = 114
+          Align = alRight
+          Color = clWhite
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          ItemHeight = 0
+          ParentFont = False
+          TabOrder = 0
+          Visible = False
+        end
+      end
+    end
+  end
+end

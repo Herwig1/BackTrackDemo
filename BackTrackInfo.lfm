@@ -1,0 +1,102 @@
+object AboutBox: TAboutBox
+  Left = 200
+  Height = 262
+  Top = 108
+  Width = 400
+  BorderStyle = bsDialog
+  Caption = 'Info'
+  ClientHeight = 262
+  ClientWidth = 400
+  Font.Color = clWindowText
+  Font.Height = -17
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Panel1: TPanel
+    Left = 10
+    Height = 198
+    Top = 10
+    Width = 382
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 198
+    ClientWidth = 382
+    TabOrder = 0
+    object ProgramIcon: TImage
+      Left = 8
+      Height = 71
+      Top = 8
+      Width = 71
+      Picture.Data = {
+        07544269746D617076020000424D760200000000000076000000280000002000
+        0000200000000100040000000000000200000000000000000000100000000000
+        000000000000000080000080000000808000800000008000800080800000C0C0
+        C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+        FF00777777777777777777777777799777777777777777777777777777779999
+        7777777777777777777777777779999997777777777777777777777777777997
+        777777777777777777777888888889988887777777777777777F000000000990
+        0087777777777777777F077777777997708777777777777ECCCCC77777777997
+        708777777777777ECCCCCC7777777997708777777777778EC88F077777777997
+        708777777777FECCCCCF077777777997708777777777F0ECCC7F077777777777
+        708777777777F07EC77F07777777777770877777ECCCCC77777F077777777777
+        70877777ECCCCCC7777F07777777777770877778EC88F077777F077777777777
+        70877FECCCCCF077777F07777777777770877F0ECCC7F077777F077A77777777
+        70877F07EC77F077777F07A22777777770877F077777F077777F0A2222000000
+        00777F077777F077777FFFA22FFFFFFFFF777F077777F077777777A227087777
+        77777F077777F0777A7777A22708777777777F077777F077A227777777087777
+        77777F077777F00A222200000007777777777F077777FFFFA22FFFFFFFF77777
+        77777F0777777777A22708777777777777777F0777777777A227087777777777
+        77777F0777777777A22708777777777777777F07777777777777087777777777
+        77777F0000000000000007777777777777777FFFFFFFFFFFFFFFF77777777777
+        7777
+      }
+      Stretch = True
+    end
+    object ProductName: TLabel
+      Left = 106
+      Height = 21
+      Top = 18
+      Width = 192
+      Caption = 'BackTrackDemo.exe'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Version: TLabel
+      Left = 106
+      Height = 21
+      Top = 47
+      Width = 249
+      Caption = 'Version 1.6  vom  22.11.2023'
+    end
+    object Copyright: TLabel
+      Left = 8
+      Height = 21
+      Top = 96
+      Width = 219
+      Caption = 'Copyright by H. Niemeyer'
+    end
+    object Comments: TLabel
+      Left = 2
+      Height = 63
+      Top = 133
+      Width = 378
+      Align = alBottom
+      Alignment = taCenter
+      Caption = 'Eine Sammlung von 13 Demonstrationsprogrammen zu Backtracking-Algorithmen'
+      WordWrap = True
+    end
+  end
+  object OKButton: TButton
+    Left = 152
+    Height = 30
+    Top = 222
+    Width = 92
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+  end
+end
